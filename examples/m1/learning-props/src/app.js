@@ -3,6 +3,8 @@
 import  React, { Component } from 'react'
 import  Title from './title'
 import NewTitle from './newTitle'
+import Square from  './square'
+
 
  class App extends Component {
   render () {
@@ -10,6 +12,12 @@ import NewTitle from './newTitle'
       <div>
         <Title name='Jefferson' lastname={{ first: 'Silva', last: 'Rago'}}/>
         <NewTitle lastname={{ last: 'Rago'}} />
+        { ['blue', 'red', 'green'].map((square, index) => (
+          <Square key={index} color={square} />
+
+        )) }
+
+        <Square color='blue'/>
       </div>
     )
   }
